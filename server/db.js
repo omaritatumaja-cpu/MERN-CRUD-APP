@@ -1,4 +1,8 @@
 const mongoose = require('mongoose');
+const dns = require('dns');
+
+// Force DNS resolution to work with the SRV record
+dns.setServers(['8.8.8.8', '1.1.1.1']);
 
 const connectDB = async () => { 
   try {
@@ -11,4 +15,5 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
+module.exports = connectDB; 
+

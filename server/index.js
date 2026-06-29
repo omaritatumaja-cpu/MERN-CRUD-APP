@@ -1,12 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
+// Load environment variables from .env file
+dotenv.config();
+
  const connectDB = require('./db'); 
 // Load the item model from the models directory
 const UserModel = require('./models/Users');
 
-// Load environment variables from .env file
-dotenv.config();
+
 
 const app = express();
 connectDB(); // Connect to MongoDB
