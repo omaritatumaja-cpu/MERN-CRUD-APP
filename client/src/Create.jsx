@@ -13,6 +13,7 @@ const CreateUser = () => {
     axios.post('http://localhost:3019/createUser', { name, email, age })
       .then(() => {navigate('/')})
       .catch(err => console.log(err));
+      
   };
 
   return (

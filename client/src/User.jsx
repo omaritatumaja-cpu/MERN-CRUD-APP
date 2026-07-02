@@ -7,7 +7,11 @@ const User = () => {
 
   useEffect(() => {
     axios.get('http://localhost:3019')
-      .then(result => setUsers(result.data))
+      .then(result =>{setUsers(result.data) 
+        
+        console.log(result.data)
+
+      } )
       .catch(err => console.log(err))
   }, []);
 
